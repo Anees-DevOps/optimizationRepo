@@ -50,3 +50,10 @@ jobs:
           echo "Deployment failed! Rolling back..."
           sleep 2
           echo "Rollback complete."
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: build/
+
